@@ -18,17 +18,31 @@
 </head>
 <body>
 <div class="container">
+    <form method="post" action="index.php">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="input-group">
+                <input type="text" class="form-control" value="<?= isset($_POST['inn']) ? $_POST['inn'] : ''?>" id="inn" name="inn" placeholder="Введите ИНН, ОГРН или название компании, ФИО, ИНН ФЛ, адрес компании">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary btn-submit" type="submit">Submit</button>
+                </span>
+            </div><!-- /input-группа -->
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.строки -->
+    </form>
 
-
-
-
-
-
+    <div>
+        <pre>
+            <?php var_dump($result); ?>
+        </pre>
+        <pre>
+            <?php var_dump($_POST); ?>
+        </pre>
+    </div>
 </div>
 <!-- на jQuery (необходим для Bootstrap - х JavaScript плагины) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Включают все скомпилированные плагины (ниже), или включать отдельные файлы по мере необходимости -->
 <script src="/js/bootstrap/bootstrap.js"></script>
-<script src="/js/action.js"></script>
 </body>
 </html>
